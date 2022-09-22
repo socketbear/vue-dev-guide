@@ -25,6 +25,14 @@ const { t } = useI18n()
       <em text-sm opacity-75>{{ t('intro.desc') }}</em>
     </p>
 
+    <RouterLink class="icon-btn mx-2" to="/guide" :title="t('button.guide')">
+      <div class="flex items-center mt-2">
+        <p class="mr-1">
+          가이드로 가기
+        </p> <div i-carbon-link />
+      </div>
+    </RouterLink>
+
     <div py-4 />
 
     <input

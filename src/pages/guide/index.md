@@ -4,7 +4,7 @@ Typescript를 사용하는 것은 이제 필수입니다. Prototype 스타일의
 개발 가이드에서는 Typescript를 설명하지는 않습니다. 이 개발 가이드 보다 더 멋지고, 잘 되어 있는 [설명서](https://typescript-kr.github.io/)들이 많습니다. 이 가이드의 중점은 Vue3로 개발을 할 때, 필요한 부분만 집어서 설명합니다. 그리고, Vue를 알고 Vue2에서 개발 경험이 있는 사람들을 대상으로 구성했습니다. 본 개발 가이드에 오류가 있다면 이슈를 남겨주세요.
 
 ## 목차
-- Interface, Enum 정의하고 사용하기
+- [Interface, Enum 정의하고 사용하기](/guide/interface)
 - To-Do Page를 만들어 보기 (Component, Store 활용)
 - Composable 영역 사용하기
 - 동적 Page Path 구성과 Layout 적용하기
