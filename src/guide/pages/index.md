@@ -7,13 +7,13 @@ Typescript를 사용하는 것은 이제 필수입니다. Prototype 스타일의
 - [Interface, Enum 정의하고 사용하기](/guide/interface)
 - To-Do Page를 만들어 보기 (Component, Store 활용)
 - Composable 영역 사용하기
-- 동적 Page Path 구성과 Layout 적용하기
+- [동적 Page Path 구성과 Layout 적용하기](/guide/dynamic-path)
 - `<script setup lang="ts">` 내 주요 요소 사용 방법 알아보기
 - Vue 사례 별 Interface 적용 방법 알아보기
 - `Reactivity transform` 간단히 살펴보기
-- Mockup 기능과 fetch 사용하기
+- [Mockup 기능과 fetch 사용하기](/guide/mockup)
 - i18n 사용하기
 - `element plus` 사용하기
 - `Vue Use` 사용하기
 - `Uno CSS` 사전 정의 셋 구성하기
-- Coding Guide
+- [Coding Guide](/guide/code)

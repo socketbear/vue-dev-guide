@@ -31,6 +31,10 @@ export default defineConfig({
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
+      dirs: [
+        { dir: 'src/pages', baseRoute: '' },
+        { dir: 'src/guide/pages', baseRoute: 'guide' },
+      ],
       extensions: ['vue', 'md'],
     }),
 
@@ -64,6 +68,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
       resolvers: [ElementPlusResolver()],
+      directoryAsNamespace: true,
     }),
 
     // https://github.com/antfu/unocss
@@ -75,6 +80,11 @@ export default defineConfig({
     Markdown({
       wrapperClasses: 'prose prose-sm m-auto text-left',
       headEnabled: true,
+      markdownItOptions: {
+        html: true,
+        linkify: true,
+        typographer: true,
+      },
       markdownItSetup(md) {
         // https://prismjs.com/
         md.use(Shiki, {
