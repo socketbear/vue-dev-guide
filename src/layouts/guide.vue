@@ -14,7 +14,9 @@ const goBack = () => {
         뒤로가기
       </el-button>
     </div>
-    <RouterView />
+    <Suspense>
+      <RouterView />
+    </Suspense>
     <Footer />
     <div class="mt-5 mx-auto text-center opacity-75 dark:opacity-50 text-sm">
       [Sample Layout]
