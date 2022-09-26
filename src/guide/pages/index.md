@@ -6,7 +6,7 @@ Typescript를 사용하는 것은 이제 필수입니다. Prototype 스타일의
 ## 목차
 - [`<script setup lang="ts">`로 들어가기](/guide/script-setup)
 - [Interface, Enum 정의하고 사용하기](/guide/interface)
-- To-Do Page를 만들어 보기 (Component, Store 활용)
+- [To-Do Page를 만들어 보기 (Component, Store 활용)](/guide/todo)
 - Composable 영역 사용하기
 - [동적 Page Path 구성과 Layout 적용하기](/guide/dynamic-path)
 - `<script setup lang="ts">` 내 주요 요소 사용 방법 알아보기
@@ -18,3 +18,4 @@ Typescript를 사용하는 것은 이제 필수입니다. Prototype 스타일의
 - `Vue Use` 사용하기
 - `Uno CSS` 사전 정의 셋 구성하기
 - [Coding Guide](/guide/code)
+- [TIP & Tricks](/guide/tips)
