@@ -53,7 +53,6 @@ const deleteTodo = () => {
         </button>
       </div>
       <table class="w-full my-2 border border-slate-400">
-        <!-- checkbox, text, 완료 버튼 순으로 column 구성 -->
         <tr class="bg-slate-100">
           <th class="w-1/12 border border-slate-300" />
           <th class="w-3/12 border border-slate-300">
@@ -70,13 +69,10 @@ const deleteTodo = () => {
           </td>
         </tr>
         <tr v-for="todo in todoList" :key="todo.id">
-          <!-- checkbox -->
           <td class="border border-slate-300">
             <input v-model="checks" type="checkbox" :value="todo">
           </td>
-          <!-- 상태 -->
           <td class="border border-slate-300">
-            <!-- TODO_STATUS를 이용하여 select로 구성 -->
             <select v-model="todo.status" class="border my-1 w-10/12" @change="changeTodoStatus(todo)">
               <option :value="TODO_STATUS.PREPARE">
                 준비
