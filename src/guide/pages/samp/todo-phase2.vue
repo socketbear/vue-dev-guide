@@ -22,6 +22,7 @@ const addTodo = () => {
 const deleteTodo = () => {
   const deleteTargetIds = checks.value.map((row: ITodo) => row.id)
   todoList.value = todoList.value.filter(todo => !deleteTargetIds.includes(todo.id))
+  checks.value = []
 }
 
 const checked = (todo: ITodo) => {
