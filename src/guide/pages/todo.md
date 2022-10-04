@@ -316,7 +316,7 @@ const changeStatus = () => {
 - 자식 Component에서 props를 받기 위해서는 `defineProps`로 받을 **props**를 정의해야 합니다. **Interface**로 구성하여 사용하면 됩니다.
 - `props`로 내려가는 데이터는 자식 컴포넌트로 내려간 이후 직접적인 수정이 없어야 합니다. 데이터의 수정은 데이터를 가지고 있는 위치에서 `emit`으로 받아 처리 되어야 합니다.
 - 부모 Component에서 **event**를 **emit**하기 위해서는 `defineEmits`로 사용될 이벤트를 정의해야 합니다. `(e: 'check', todo: ITodo): void` 함수형 정의 간, 사용될 이벤트 명칭과 parameter와 return 타입 정의를 하면 됩니다. 간단한 사용도 가능합니다. `defineEmits(['check'])` 형식으로 이벤트 명만 지정하여 사용 가능합니다. 하지만, **타입을 정의해서 사용**하는 것이 더 좋습니다.
-- `$ref` 형식은 [**Reactivity transform**](https://vuejs.org/guide/extras/reactivity-transform.html)기능이며, `.value`를 사용하지 않아도 사용이 가능합니다. 사용 시, 꼭 `const`로 사용해야 합니다. (**참조 변조를 막기 위함**) 해당 부분에 에러가 난다면 잘못 사용하는 것입니다.
+- `$ref` 형식은 [**Reactivity transform**](https://vuejs.org/guide/extras/reactivity-transform.html)기능이며, `.value`를 사용하지 않아도 사용이 가능합니다. 사용 시, 꼭 `const`로 사용해야 합니다. (**참조 변조를 막기 위함**) 해당 부분에 에러가 난다면 잘못 사용하는 것입니다. 필연적으로 바뀌는 `boolean` 형식에는 사용 않는 것이 좋습니다.
 
 ## [Phase 3. Store 적용](/guide/samp/todo-phase3)
 Component로 쪼개어 개발하게 되면 필연적으로 `props`를 통해 컴포넌트들에게 Model을 주게 됩니다. 이 경우, props로 받게되는 데이터를 컴포넌트에서는 **변경해서는 안됩니다**. 불변성을 해치게 되면 다른 컴포넌트에 어떠한 Side effect가 도출 될 지 모릅니다. **Phase 2** 단계에서는 이를 회피하기 위해 `Todo`에서 값을 복사하여 사용합니다. 한편, 이벤트 경우에도 실제 발생하는 것은 `Todo`이지만, 소비되는 곳은 Page입니다. 중간에 위치된 `TodoList`에서 이를 연계할 수 있게 귀찮은 `emit` 선언을 해야만 합니다.
