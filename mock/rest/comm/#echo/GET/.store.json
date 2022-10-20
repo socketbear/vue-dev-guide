@@ -1,0 +1,13 @@
+{
+  "validation": {
+    "success.json": {
+      "counter": 1
+    },
+    "empty": {
+      "counter": 0
+    },
+    "success": {
+      "counter": 1
+    }
+  }
+}
