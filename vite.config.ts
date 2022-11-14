@@ -144,6 +144,15 @@ export default defineConfig({
     Inspect(),
   ],
 
+  // SCSS 전역 사용
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "./src/styles/_variables";',
+      },
+    },
+  },
+
   // https://github.com/vitest-dev/vitest
   test: {
     include: ['test/**/*.test.ts'],

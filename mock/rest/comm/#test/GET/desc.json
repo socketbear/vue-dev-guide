@@ -1,0 +1,12 @@
+{
+  "desc": "comm 내 테스트 용",
+  "security": [],
+  "protected": false,
+  "status": "",
+  "response": {
+    "statusCode": 200,
+    "schema": {
+      "type": "application/json"
+    }
+  }
+}

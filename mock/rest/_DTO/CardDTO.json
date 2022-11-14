@@ -1,0 +1,5 @@
+{
+  "cardId": "string",
+  "message": "string",
+  "price": "number"
+}
