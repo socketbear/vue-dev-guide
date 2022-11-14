@@ -1,0 +1,11 @@
+.test {
+  .point-color {
+    color: $test-title-color;
+  }
+  .box {
+    border: 1px solid red;
+    .point-color {
+      color: $test-box-color;
+    }
+  }
+}

@@ -11,6 +11,7 @@ Typescript를 사용하는 것은 이제 필수입니다. Prototype 스타일의
 - [동적 Page Path 구성과 Layout 적용하기](/guide/dynamic-path)
 - [`Reactivity transform` 간단히 살펴보기](/guide/reactivity-transform)
 - [Mockup 기능과 fetch 사용하기](/guide/mockup)
+- [Css Style 작업을 위한 `.scss` 사용하기](/guide/scss)
 - i18n 사용하기
 - `element plus` 사용하기
 - `Vue Use` 사용하기
