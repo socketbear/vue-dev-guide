@@ -16,7 +16,7 @@ mockServer({
   contentType: 'application/json',
   accessControlExposeHeaders: 'X-Total-Count',
   accessControlAllowOrigin: '*',
-  accessControlAllowMethods: 'GET, POST, PUT, OPTIONS, DELETE, PATCH, HEAD',
+  accessControlAllowMethods: 'GET, POST, PUT, DELETE',
   accessControlAllowHeaders: 'origin, x-requested-with, content-type',
   accessControlAllowCredentials: 'true',
   headers: {},
