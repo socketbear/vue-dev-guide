@@ -32,5 +32,15 @@ export default {
 }
 ```
 각 서비스를 나눠진다 해도, `Vite`의 `Pages` 플러그인을 사용할 수 있습니다. 위와 같이 등록하게 되면, **sub-path**로 각 서비스들을 접근하여 사용할 수 있습니다.
+
+## Layout 구조
+**Framework**에서는 layout으로 사용되는 파일들은 `src/layouts`에 정의합니다. 기본은 `default.vue`로 정의되어 있습니다. 그리고 각 **페이지**에서 아래와 같이 내역을 추가하면 특정 layout 파일을 사용할 수 있습니다.
+```yaml
+<route lang="yaml">
+meta:
+  layout: guide
+</route>
+```
+layout을 사용한 페이지는 layout 내 `<RouterView />`에 해당 페이지가 렌더링 됩니다. 다시 정리하자면, 각 **페이지**에서 사용하는 layout을 **선택**하는 구조 입니다.
 ## Links
 - https://github.com/hannoeru/vite-plugin-pages
