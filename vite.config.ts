@@ -23,6 +23,17 @@ export default defineConfig({
     },
   },
 
+  server: {
+    proxy: {
+      '/api/v1': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        // path rewrite가 필요할 경우 사용
+        // rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
+
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
