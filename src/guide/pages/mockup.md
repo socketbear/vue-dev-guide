@@ -44,5 +44,17 @@
 }
 ```
 위와 같이 정의가 마무리되면 `validate` 기능을 통해 `mockup` 데이터 검증이 가능합니다.
+
+## 개발환경에서 서버 API 접근하기
+`local` 개발 환경에서 mockup 서버에 접근 혹은, 실제 서버에 접근하는 방법은 `vitejs`에서 제공하는 proxy 기능으로 접근이 가능합니다. `API`들은 proxy 설정이 가능할 수 있도록 `api`와 같이 기준 **subpath**가 존재합니다. 혹은 `context-path` 라고 부르기도 합니다. 이를 기준으로 개발 환경에서 해당 서버들을 접근할 수 있도록 `proxy` 설정이 가능합니다. 해당 기능은 `vite.config.js` 내 [`server.proxy` 항목](https://vitejs.dev/config/server-options.html#server-proxy)을 확인하면 됩니다.
+
+프레임워크는 기본적으로 mock 서버인 `http://localhost:3001`를 가르키고 있습니다. 기준 값은 `/api` 입니다.
+
+## `fetch()` 사용하기
+이전의 프레임워크나 대부분 프로젝트에서는 `axios` 라이브러리를 많이 사용하여, **restful api** 사용을 하였습니다. 사실 이를 사용하지 않아도 `fetch()`라는 것을 통해 손쉽게 restful api를 조회할 수 있습니다. 크롬의 경우 42 버전 부터 사용이 가능합니다. 프레임워크에서는 일반적으로 `Wrapper`를 구성해서 사용합니다. 그대로 fetch()를 사용하는 것도 낭만적이지만, 공통에서 처리해야 할 (interceptor와 같이) 부분이 있기 때문입니다.
+
+`composables` 항목에 `request.ts`로 정의했고, 어디든 선언 없이 비동기 함수인 `request()`를 사용하면 됩니다. `src\composables\request.ts` 파일 내용을 확인하고 공통으로 처리가 필요한 항목들을 Customizing 하면 됩니다. 한편, 현재 프레임워크는 이전 항목들과 같이 `.env` 파일에 주요 환경 내용을 선언하여 처리합니다. request 경우, prefixUrl로 `/api/v1`을 사용하는데, 이는 `.env`에 정의하고 있습니다. 자세한 내용은 [여기](https://vitejs.dev/guide/env-and-mode.html)를 참고하십시오.
+
+간단한 샘플로 [`src\guide\pages\samp\fetch.vue`](/guide/samp/fetch)를 확인하십시오.
 ## Links
 - [Node Mock Server](https://github.com/smollweide/node-mock-server)

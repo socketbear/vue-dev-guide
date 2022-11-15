@@ -7,6 +7,7 @@ dist-ssr
 node_modules
 .idea/
 *.log
+.env.*.local
 
 mock/rest/*/*/*/mock/response.txt
 mock/rest/.validation.json
