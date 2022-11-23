@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Basic from '~/docs/guide/interface-basic.md'
+import Basic from '~/guide/pages/interface.md'
 import { EState } from '~/types/enums/guide'
 
 enum UNIT_POSITION {
