@@ -3,10 +3,9 @@
 - [vitesse](https://github.com/antfu/vitesse)를 기반으로 구성됨
 
 ## 가이드 구성 진행 사항
-- [ ] Vue3 환경에서 Typescript 사용 가이드 `진행중`
-- [ ] Framework 내 주요 사용 방안
-- [ ] Coding Convention
-- [ ] Change the favicon in `public`
+- [x] Vue3 환경에서 Typescript 사용 가이드
+- [x] Framework 내 주요 사용 방안
+- [X] Coding Guide
 
 ## 구성될 Framework의 기본 기능들
 
