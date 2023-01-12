@@ -13,3 +13,6 @@ Error: Could not locate the bindings file. Tried:
  → C:\workspace\vue-dev-guide\node_modules\.pnpm\deasync@0.1.20\node_modules\deasync\build\deasync.node  
  ```
 이 경우, `node-gyp` 사용하는 빌드 문제이며, `pnpm rebuild` 명령을 수행하면 된다. (Python 3.x 설치 필요)
+
+## Snippets
+- [Number Format 형식으로 출력하는 Input](/guide/snippets/num-form)
