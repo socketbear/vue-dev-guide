@@ -7,6 +7,12 @@
 - [x] Framework 내 주요 사용 방안
 - [X] Coding Guide
 
+## Framework 추가 할 수 있는 기능 들
+- pure javascript library에 대한 **Lazy** 로드
+- **Event Bus** 및 **Event Manager**
+- 다수 **Snippets**
+- 다수 Vue3, Typescript **강의 자료**들
+
 ## 구성될 Framework의 기본 기능들
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
