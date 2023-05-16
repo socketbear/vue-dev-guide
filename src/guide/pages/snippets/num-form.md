@@ -3,28 +3,30 @@
 
 해당 예제 소스를 통해, Vue3와 Typescript 환경에서 `v-model`을 사용하는 방법과, `Computed()`의 `get`, `set` 기능을 확인할 수 있습니다.
 
+```vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import CustForm from '../../components/cust/NumberFormatInput.vue'
 import {
-  Plus,
   Minus,
+  Plus,
 } from '@element-plus/icons-vue'
+import CustForm from '../../components/cust/NumberFormatInput.vue'
 const amount = ref(0)
-
 </script>
 
-<div class="flex items-center">
-  <p class="my-1 mr-2 font-bold">숫자 입력 > </p>
-  <CustForm v-model="amount" />
-  <el-button-group class="ml-4" size="small">
-    <el-button type="primary" :icon="Plus" @click="amount += 500"/>
-    <el-button type="primary" :icon="Minus" @click="amount -= 500"/>
-  </el-button-group>
-</div>
-
-실제 숫자: {{amount}}
-
+<template>
+  <div class="flex items-center">
+    <p class="my-1 mr-2 font-bold">
+      숫자 입력 >
+    </p>
+    <CustForm v-model="amount" />
+    <el-button-group class="ml-4" size="small">
+      <el-button type="primary" :icon="Plus" @click="amount += 500" />
+      <el-button type="primary" :icon="Minus" @click="amount -= 500" />
+    </el-button-group>
+  </div>
+</template>
+```
 ## 소스 코드
 ### Parents
 `src\guide\pages\snippets\num-form.md` 파일 내 사용된 소스 코드입니다.
