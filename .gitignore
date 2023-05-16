@@ -9,5 +9,8 @@ node_modules
 *.log
 .env.*.local
 
+auto-imports.d.ts
+components.d.ts
+
 mock/rest/*/*/*/mock/response.txt
 mock/rest/.validation.json

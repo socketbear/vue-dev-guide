@@ -1,4 +1,0 @@
-{
-  "success": "boolean",
-  "body": "$ref-CardDTO"
-}
