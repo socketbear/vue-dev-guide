@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "preview-https": "serve dist",
     "test": "vitest",
-    "test:unit": "vitest",
+    "test:unit": "vitest run",
     "typecheck": "vue-tsc --noEmit",
     "up": "taze major -I"
   },

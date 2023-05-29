@@ -1,0 +1,29 @@
+name: test script for pr and merge
+
+on:
+  push:
+    branches: ["main", "draft"]
+  pull_request:
+    types: [opened, reopened]
+    branches: ["main", "draft"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # strategy:
+      # matrix:
+        # node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: corepack enable
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+      - run: pnpm run build
+      - run: pnpm run test:unit
