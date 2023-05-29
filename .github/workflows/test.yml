@@ -2,10 +2,10 @@ name: test script for pr and merge
 
 on:
   push:
-    branches: ["main", "draft"]
+    branches: ["main", "draft", "dev"]
   pull_request:
     types: [opened, reopened]
-    branches: ["main", "draft"]
+    branches: ["main", "draft", "dev"]
 
 jobs:
   test:
@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18.x]
         os: [ubuntu-latest]
       fail-fast: false
 
