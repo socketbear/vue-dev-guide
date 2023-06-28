@@ -2,7 +2,7 @@ import type { ElMessageBoxOptions } from 'element-plus'
 import type { Component, VNode, VNodeArrayChildren, VNodeProps } from 'vue'
 
 export function useReturnMessage() {
-  const showFromNode = <T>(vNode: VNode, title?: string | ElMessageBoxOptions | undefined) => new Promise<T>((resolve, reject) => {
+  const showFromNode = <T>({ vNode, title }: ReturnMsgParams) => new Promise<T>((resolve, reject) => {
     ElMessageBox({
       title,
       beforeClose: (action, instance, done) => {
@@ -25,12 +25,17 @@ export function useReturnMessage() {
     })
   })
 
-  const showFromFile = <T>(p: IFromFile<T>) => showFromNode<T>(h(p.component, p.props, p.children), p.title)
+  const showFromFile = <T>(p: IFromFile<T>) => showFromNode<T>({ vNode: h(p.component, p.props, p.children), title: p.title })
 
   return {
     showFromNode,
     showFromFile,
   }
+}
+
+interface ReturnMsgParams {
+  vNode: VNode
+  title?: string | ElMessageBoxOptions | undefined
 }
 
 type RawProps = VNodeProps & {

@@ -224,7 +224,7 @@ const getListNode = () => h(List, {
 }, {})
 async function openTsx() {
   const vNode = getListNode()
-  showFromNode<IListItem>(vNode)
+  showFromNode<IListItem>({vNode})
     .then((result) => { console.log(result) })
     .catch(err => console.error(err))
 }
